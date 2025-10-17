@@ -1,69 +1,86 @@
-# React + TypeScript + Vite
+# 🪶 @joana23a/styled-lib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Biblioteca de componentes estilizados criada para padronizar e acelerar o desenvolvimento de interfaces em aplicações React.  
+Atualmente, a lib inclui **botões**, **inputs**, **ícones** e outros componentes reutilizáveis, sendo atualizada continuamente conforme as necessidades dos projetos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Instalação
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install @joana23a/styled-lib
+# ou
+yarn add @joana23a/styled-lib
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+⚠️ Certifique-se de ter o React, React DOM e React Router DOM instalados no projeto, pois são dependências peer:
 ```
+npm install react react-dom react-router-dom
+
+```
+
+## 🧩 Componentes disponíveis
+| Componente | Descrição                                                   |
+| ---------- | ----------------------------------------------------------- |
+| `Button`   | Botão estilizado com variações (primário, secundário, etc.) |
+| `Input`    | Campo de entrada com estilos consistentes                   |
+| `Icon`     | Conjunto de ícones prontos para uso                         |
+| `Select`   | Select personalizado utilizando `react-select`              |
+
+(Mais componentes serão adicionados conforme a evolução da lib.)
+
+## 🪄 Exemplo de uso
+```
+import { Button, Input } from "@joana23a/styled-lib";
+
+export function Exemplo() {
+  return (
+    <div className="flex flex-col gap-4 w-64">
+      <Input placeholder="Digite algo..." />
+      <Button variant="primary" onClick={() => alert("Clicado!")}>
+        Enviar
+      </Button>
+    </div>
+  );
+}
+
+```
+🧭 Roadmap
+
+  - [x]Componentes básicos (botão, input, ícones)
+
+  - [ ]Sistema de temas (cores e tipografia)
+
+  - [ ]Documentação completa no Storybook
+
+  - [ ]Novos componentes (modal, card, navbar)
+
+  - [x]Publicação automatizada via CI/CD
+
+## 🧑‍💻 Desenvolvimento local
+
+Se quiser contribuir ou testar localmente:
+```
+git clone https://github.com/joana23a/styled-lib.git
+cd styled-lib
+npm install
+npm run dev
+```
+
+Para visualizar os componentes no Storybook:
+```
+npm run storybook
+```
+
+## 📦 Build
+
+Para gerar a versão final da biblioteca:
+```
+npm run build
+
+```
+Os arquivos compilados ficam disponíveis em /dist.
+
+## 🌱 Observações
+A biblioteca está em constante evolução.
+Novos componentes e ajustes serão adicionados conforme as necessidades dos projetos que utilizam a lib.
