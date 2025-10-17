@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "target": "ESNext"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "storybook", "public"]
+}
