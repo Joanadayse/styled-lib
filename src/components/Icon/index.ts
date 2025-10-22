@@ -20,5 +20,22 @@ export { default as Trash } from './icons/trash.svg';
 export { default as Wifi } from './icons/wifi.svg';
 export { default as IconX } from './icons/x.svg';
 export  { default as CalendarIcon } from './icons/Icon-calendar.svg';
-
+export  { default as Codepen } from './icons/codepen.svg';
+export  { default as Eye } from './icons/eye.svg';
+export  { default as FileText } from './icons/file-text.svg';
+export  { default as Filter } from './icons/filter.svg';
+export  { default as ImportProduct } from './icons/icon-import-product.svg';
+export  { default as Message } from './icons/icon-message.svg';
+export  { default as NewProduct } from './icons/icon-new-product.svg';
+export  { default as Rate } from './icons/icon-rate.svg';
+export  { default as Alert } from './icons/Icon-alert-circle.svg';
+export  { default as Maximize} from './icons/maximize-2.svg';
+export  { default as Shopping } from './icons/shopping-cart.svg';
+export  { default as TrendingUp } from './icons/trending-up.svg';
+export  { default as Truck } from './icons/truck.svg';
+export  { default as AlertDown } from './icons/file-down-alert.svg';
+export  { default as ReviewAlert } from './icons/file-review-alert.svg';
+export  { default as CheckAlert } from './icons/check-alert.svg';
+export  { default as TrashAlert } from './icons/trash-alert.svg';
+export  { default as ErrorAlert } from './icons/error-alert.svg';
 
