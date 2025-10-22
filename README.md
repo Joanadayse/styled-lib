@@ -51,9 +51,9 @@ export function Exemplo() {
 
   - [ ]Sistema de temas (cores e tipografia)
 
-  - [ ]Documentação completa no Storybook
+  - [X]Documentação completa no Storybook
 
-  - [ ]Novos componentes (modal, card, navbar)
+  - [X]Novos componentes (modal, card, navbar)
 
   - [x]Publicação automatizada via CI/CD
 
