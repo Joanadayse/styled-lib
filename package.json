@@ -1,6 +1,6 @@
 {
   "name": "@joana23a/styled-lib",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "type": "module",
   "main": "dist/styled-kit.umd.js",
   "module": "dist/styled-kit.es.js",
