@@ -14,7 +14,7 @@ Coleção completa de ícones da biblioteca.
 ### 💡 Uso
 
 ~~~tsx
-import { List, User, Home } from "@joana23a/styled-lib";
+import  List, User, Home  from "@joana23a/styled-lib";
 
 <List width={48} height={48} fill="red" />
 ~~~

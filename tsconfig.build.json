@@ -12,6 +12,20 @@
     "jsx": "react-jsx",
     "target": "ESNext"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "storybook", "public"]
+ "include": [
+  "src",
+  "src/types/svg.d.ts"
+],
+"exclude": [
+  "node_modules",
+  "dist",
+  "storybook",
+  "public",
+  "**/*.stories.tsx",
+  "src/App.tsx"
+]
+
+
+
+
 }
