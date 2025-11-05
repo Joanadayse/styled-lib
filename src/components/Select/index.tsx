@@ -1,17 +1,15 @@
 import { useState, useRef, useEffect } from "react";
-import {ChevronDown} from "../Icon";
-
-
+import { ChevronDown } from "../Icon";
 
 interface Option {
   label: string;
-  value: string;
+  value: string | number; // agora aceita number também
 }
 
 interface CustomSelectProps {
   options: Option[];
-  value: string;
-  onChange: (value: string) => void;
+  value: string | number | null; // aceita null para nenhum valor selecionado
+  onChange: (value: string | number) => void;
   placeholder?: string;
   disabled?: boolean;
 }
@@ -37,10 +35,14 @@ export const CustomSelect = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelect = (val: string) => {
+  const handleSelect = (val: string | number) => {
     onChange(val);
     setIsOpen(false);
   };
+
+  // Busca o label correspondente ao value, usando comparação flexível
+  const selectedLabel = options.find((o) => o.value == value)?.label; // == permite string/number
+  
 
   return (
     <div className="relative" ref={selectRef}>
@@ -56,12 +58,11 @@ export const CustomSelect = ({
           ${!disabled && isOpen ? "ring-2 ring-[#C20FB5]" : ""}
         `}
       >
-        <span>{value ? options.find((o) => o.value === value)?.label : placeholder}</span>
-                <ChevronDown
+        <span>{selectedLabel ?? placeholder}</span>
+        <ChevronDown
           className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
           width={20}
           height={20}
-
         />
       </div>
 
@@ -75,7 +76,7 @@ export const CustomSelect = ({
               className={`
                 px-[16px] py-[16px] text-[#738196] font-inter text-[16px] leading-[140%] cursor-pointer
                 hover:bg-[#E2E8F0] hover:text-[#45556C]
-                ${option.value === value ? "bg-[#FFE8FB] text-[#C20FB5]" : ""}
+                ${option.value == value ? "bg-[#FFE8FB] text-[#C20FB5]" : ""}
               `}
             >
               {option.label}

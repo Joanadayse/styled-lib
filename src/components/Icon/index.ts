@@ -1,86 +1,93 @@
+
+
+// Basta importar todos os ícones com o sufixo ?react
+import Search from './icons/Icon-search.svg?react';
+import ArrowLeft from './icons/Icon-ArrowLeft.svg?react';
+import CheckCircle from './icons/Icon-check-circle.svg?react';
+import ChevronDown from './icons/Icon-chevron-down.svg?react';
+import ChevronLeft from './icons/Icon-chevron-left.svg?react';
+import ChevronRight from './icons/Icon-chevron-right.svg?react';
+import ChevronUp from './icons/Icon-chevron-up.svg?react';
+import Download from './icons/Icon-download.svg?react';
+import Graphic from './icons/Icon-graphic.svg?react';
+import History from './icons/Icon-history.svg?react';
+import List from './icons/Icon-list.svg?react';
+import Logout from './icons/Icon-log-out.svg?react';
+import Plus from './icons/Icon-plus.svg?react';
+import UserStar from './icons/Icon-user-star.svg?react';
+import Monitor from './icons/monitor.svg?react';
+import MoreVertical from './icons/more-vertical.svg?react';
+import Projetor from './icons/projetor.svg?react';
+import Tomada from './icons/tomada.svg?react';
+import Trash from './icons/trash.svg?react';
+import Wifi from './icons/wifi.svg?react';
+import IconX from './icons/x.svg?react';
+import CalendarIcon from './icons/Icon-calendar.svg?react';
+import Codepen from './icons/codepen.svg?react';
+import Eye from './icons/eye.svg?react';
+import FileText from './icons/file-text.svg?react';
+import Filter from './icons/filter.svg?react';
+import ImportProduct from './icons/icon-import-product.svg?react';
+import Message from './icons/icon-message.svg?react';
+import NewProduct from './icons/icon-new-product.svg?react';
+import Rate from './icons/icon-rate.svg?react';
+import Alert from './icons/Icon-alert-circle.svg?react';
+import Maximize from './icons/maximize-2.svg?react';
+import Shopping from './icons/shopping-cart.svg?react';
+import TrendingUp from './icons/trending-up.svg?react';
+import Truck from './icons/truck.svg?react';
+import AlertDown from './icons/file-down-alert.svg?react';
+import ReviewAlert from './icons/file-review-alert.svg?react';
+import CheckAlert from './icons/check-alert.svg?react';
+import TrashAlert from './icons/trash-alert.svg?react';
+import ErrorAlert from './icons/error-alert.svg?react';
+import AwardIcon from './icons/Icon-award.svg?react';
 import type { FC, SVGProps } from 'react';
 
-// 🧩 Imports dos SVGs
-import SearchSVG from './icons/Icon-search.svg?react';
-import ArrowLeftSVG from './icons/Icon-ArrowLeft.svg?react';
-import CheckCircleSVG from './icons/Icon-check-circle.svg?react';
-import ChevronDownSVG from './icons/Icon-chevron-down.svg?react';
-import ChevronLeftSVG from './icons/Icon-chevron-left.svg?react';
-import ChevronRightSVG from './icons/Icon-chevron-right.svg?react';
-import ChevronUpSVG from './icons/Icon-chevron-up.svg?react';
-import DownloadSVG from './icons/Icon-download.svg?react';
-import GraphicSVG from './icons/Icon-graphic.svg?react';
-import HistorySVG from './icons/Icon-history.svg?react';
-import ListSVG from './icons/Icon-list.svg?react';
-import LogoutSVG from './icons/Icon-log-out.svg?react';
-import PlusSVG from './icons/Icon-plus.svg?react';
-import UserStarSVG from './icons/Icon-user-star.svg?react';
-import MonitorSVG from './icons/monitor.svg?react';
-import MoreVerticalSVG from './icons/more-vertical.svg?react';
-import ProjetorSVG from './icons/projetor.svg?react';
-import TomadaSVG from './icons/tomada.svg?react';
-import TrashSVG from './icons/trash.svg?react';
-import WifiSVG from './icons/wifi.svg?react';
-import IconXSVG from './icons/x.svg?react';
-import CalendarIconSVG from './icons/Icon-calendar.svg?react';
-import CodepenSVG from './icons/codepen.svg?react';
-import EyeSVG from './icons/eye.svg?react';
-import FileTextSVG from './icons/file-text.svg?react';
-import FilterSVG from './icons/filter.svg?react';
-import ImportProductSVG from './icons/icon-import-product.svg?react';
-import MessageSVG from './icons/icon-message.svg?react';
-import NewProductSVG from './icons/icon-new-product.svg?react';
-import RateSVG from './icons/icon-rate.svg?react';
-import AlertSVG from './icons/Icon-alert-circle.svg?react';
-import MaximizeSVG from './icons/maximize-2.svg?react';
-import ShoppingSVG from './icons/shopping-cart.svg?react';
-import TrendingUpSVG from './icons/trending-up.svg?react';
-import TruckSVG from './icons/truck.svg?react';
-import AlertDownSVG from './icons/file-down-alert.svg?react';
-import ReviewAlertSVG from './icons/file-review-alert.svg?react';
-import CheckAlertSVG from './icons/check-alert.svg?react';
-import TrashAlertSVG from './icons/trash-alert.svg?react';
-import ErrorAlertSVG from './icons/error-alert.svg?react';
+// ✅ Exporta todos os ícones
+export {
+  Search,
+  ArrowLeft,
+  CheckCircle,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  Download,
+  Graphic,
+  History,
+  List,
+  Logout,
+  Plus,
+  UserStar,
+  Monitor,
+  MoreVertical,
+  Projetor,
+  Tomada,
+  Trash,
+  Wifi,
+  IconX,
+  CalendarIcon,
+  Codepen,
+  Eye,
+  FileText,
+  Filter,
+  ImportProduct,
+  Message,
+  NewProduct,
+  Rate,
+  Alert,
+  Maximize,
+  Shopping,
+  TrendingUp,
+  Truck,
+  AlertDown,
+  ReviewAlert,
+  CheckAlert,
+  TrashAlert,
+  ErrorAlert,
+  AwardIcon,
+};
 
-
-// 🧠 Exports tipados — agora todos aceitam width, height, className, fill, etc
-export const Search: FC<SVGProps<SVGSVGElement>> = SearchSVG;
-export const ArrowLeft: FC<SVGProps<SVGSVGElement>> = ArrowLeftSVG;
-export const CheckCircle: FC<SVGProps<SVGSVGElement>> = CheckCircleSVG;
-export const ChevronDown: FC<SVGProps<SVGSVGElement>> = ChevronDownSVG;
-export const ChevronLeft: FC<SVGProps<SVGSVGElement>> = ChevronLeftSVG;
-export const ChevronRight: FC<SVGProps<SVGSVGElement>> = ChevronRightSVG;
-export const ChevronUp: FC<SVGProps<SVGSVGElement>> = ChevronUpSVG;
-export const Download: FC<SVGProps<SVGSVGElement>> = DownloadSVG;
-export const Graphic: FC<SVGProps<SVGSVGElement>> = GraphicSVG;
-export const History: FC<SVGProps<SVGSVGElement>> = HistorySVG;
-export const List: FC<SVGProps<SVGSVGElement>> = ListSVG;
-export const Logout: FC<SVGProps<SVGSVGElement>> = LogoutSVG;
-export const Plus: FC<SVGProps<SVGSVGElement>> = PlusSVG;
-export const UserStar: FC<SVGProps<SVGSVGElement>> = UserStarSVG;
-export const Monitor: FC<SVGProps<SVGSVGElement>> = MonitorSVG;
-export const MoreVertical: FC<SVGProps<SVGSVGElement>> = MoreVerticalSVG;
-export const Projetor: FC<SVGProps<SVGSVGElement>> = ProjetorSVG;
-export const Tomada: FC<SVGProps<SVGSVGElement>> = TomadaSVG;
-export const Trash: FC<SVGProps<SVGSVGElement>> = TrashSVG;
-export const Wifi: FC<SVGProps<SVGSVGElement>> = WifiSVG;
-export const IconX: FC<SVGProps<SVGSVGElement>> = IconXSVG;
-export const CalendarIcon: FC<SVGProps<SVGSVGElement>> = CalendarIconSVG;
-export const Codepen: FC<SVGProps<SVGSVGElement>> = CodepenSVG;
-export const Eye: FC<SVGProps<SVGSVGElement>> = EyeSVG;
-export const FileText: FC<SVGProps<SVGSVGElement>> = FileTextSVG;
-export const Filter: FC<SVGProps<SVGSVGElement>> = FilterSVG;
-export const ImportProduct: FC<SVGProps<SVGSVGElement>> = ImportProductSVG;
-export const Message: FC<SVGProps<SVGSVGElement>> = MessageSVG;
-export const NewProduct: FC<SVGProps<SVGSVGElement>> = NewProductSVG;
-export const Rate: FC<SVGProps<SVGSVGElement>> = RateSVG;
-export const Alert: FC<SVGProps<SVGSVGElement>> = AlertSVG;
-export const Maximize: FC<SVGProps<SVGSVGElement>> = MaximizeSVG;
-export const Shopping: FC<SVGProps<SVGSVGElement>> = ShoppingSVG;
-export const TrendingUp: FC<SVGProps<SVGSVGElement>> = TrendingUpSVG;
-export const Truck: FC<SVGProps<SVGSVGElement>> = TruckSVG;
-export const AlertDown: FC<SVGProps<SVGSVGElement>> = AlertDownSVG;
-export const ReviewAlert: FC<SVGProps<SVGSVGElement>> = ReviewAlertSVG;
-export const CheckAlert: FC<SVGProps<SVGSVGElement>> = CheckAlertSVG;
-export const TrashAlert: FC<SVGProps<SVGSVGElement>> = TrashAlertSVG;
-export const ErrorAlert: FC<SVGProps<SVGSVGElement>> = ErrorAlertSVG;
+// ✅ Tipo genérico para quem quiser usar via prop tipada
+export type IconType = FC<SVGProps<SVGSVGElement>>;

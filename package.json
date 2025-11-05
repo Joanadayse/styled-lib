@@ -2,22 +2,34 @@
   "name": "@joana23a/styled-lib",
   "version": "1.0.22",
   "type": "module",
-  "main": "dist/styled-kit.umd.js",
-  "module": "dist/styled-kit.es.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/styled-kit.umd.js",
+  "module": "./dist/styled-kit.es.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
-  "author": "Joana Dayse ",
+  "author": "Joana Dayse",
   "files": [
     "dist",
     "README.md"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/styled-kit.es.js",
+      "require": "./dist/styled-kit.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -31,6 +43,8 @@
     "@storybook/addon-docs": "^9.1.13",
     "@storybook/addon-vitest": "^9.1.13",
     "@storybook/react-vite": "^9.1.13",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@types/node": "^24.5.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
@@ -55,10 +69,5 @@
     "vite-plugin-dts": "^4.5.4",
     "vite-plugin-svgr": "^4.5.0",
     "vitest": "^3.2.4"
-  },
-  "peerDependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.1"
   }
 }

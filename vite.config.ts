@@ -8,10 +8,16 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
-      include: '**/*.svg',
+      include: '**/*.svg?react',
       svgrOptions: {
         exportType: 'default',
         icon: true,
+        replaceAttrValues: {
+          '#45556C': 'currentColor',
+          '#738196': 'currentColor',
+          '#C20FB5': 'currentColor',
+          '#000000': 'currentColor',
+        },
       },
     }),
     dts({
@@ -24,7 +30,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'StyledKit',
-      formats: ['es', 'cjs'], // importante gerar os dois formatos
+      formats: ['es', 'cjs'],
       fileName: (format) => `styled-kit.${format}.js`,
     },
     rollupOptions: {

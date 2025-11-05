@@ -10,7 +10,8 @@
     "moduleResolution": "Node",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "target": "ESNext"
+    "target": "ESNext",
+     "types": ["vite-plugin-svgr/client"]
   },
  "include": [
   "src",
