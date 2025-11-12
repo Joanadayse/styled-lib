@@ -8,12 +8,18 @@ interface TextAreaProps {
   className?: string;
 }
 
-export const TextArea = ({ placeholder, value, onChange, rows = 4, className = '' }: TextAreaProps) => (
+export const TextArea = ({
+  placeholder,
+  value,
+  onChange,
+  rows = 3,
+  className = "",
+}: TextAreaProps) => (
   <textarea
     placeholder={placeholder}
     value={value}
     onChange={onChange}
     rows={rows}
-    className={`w-full rounded-[8px] px-[16px] py-[8px] bg-[#FAFBFF] border border-[#CAD5E2] text-[#45556C] font-inter text-[16px] leading-[140%] outline-none ${className}`}
+    className={`w-[499.5px] min-h-[56px] rounded-[8px] px-[16px] py-[14px] bg-[#FAFBFF] border border-[#CAD5E2] text-[#45556C] font-inter text-[16px] leading-[140%] outline-none resize-none ${className}`}
   />
 );
